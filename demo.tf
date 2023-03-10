@@ -15,11 +15,16 @@ terraform {
 }
 
 provider "aws" {
-  alias = "east"
+  alias  = "east"
   region = "us-east-1"
 }
 
 provider "aws" {
-  alias = "west"
+  alias  = "west"
   region = "us-west-1"
+}
+
+resource "aws_vpc" "esau-vpc" {
+  provider   = aws.east
+  cidr_block = "10.1.0.0/26"
 }
