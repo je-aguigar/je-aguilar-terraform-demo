@@ -1,6 +1,6 @@
 terraform {
   backend "local" {
-    path = "/Users/esauaguilar/Desktop/terraform/terraform.tfstate"
+    path = "./terraform.tfstate"
   }
   required_providers {
     aws = {
