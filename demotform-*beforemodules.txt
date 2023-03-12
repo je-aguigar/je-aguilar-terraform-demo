@@ -1,6 +1,11 @@
 terraform {
-  backend "local" {
+  /*backend "local" {
     path = "./terraform.tfstate"
+  }*/
+  backend "s3" {
+    bucket = "tf-demo-esau"
+    key    = "demo-tf/terraform.tfstate"
+    region = "us-east-1"
   }
   required_providers {
     aws = {
@@ -75,7 +80,7 @@ resource "aws_instance" "instance1" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = "t3.micro"
   network_interface {
-    network_interface_id = aws_network_interface.interface2.id
+    network_interface_id = aws_network_interface.interface1.id
     device_index         = 0
   }
   tags = {
