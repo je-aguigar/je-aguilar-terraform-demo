@@ -21,7 +21,10 @@ resource "aws_subnet" "subnet" {
 }
 
 resource "aws_network_interface" "interface" {
-  subnet_id   = aws_subnet.subnet.id
-  private_ips = var.private_ips #["10.1.0.12"]
-  tags        = var.tags
+  count     = var.num_interfaces
+  subnet_id = aws_subnet.subnet.id
+  tags = merge(
+    { name = "interface-${count.index + 1}" },
+    var.tags
+  )
 }

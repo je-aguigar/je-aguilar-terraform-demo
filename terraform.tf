@@ -4,7 +4,7 @@ terraform {
   }*/
   backend "s3" {
     bucket = "tf-demo-esau"
-    key    = "demo-tf/terraform.tfstate"
+    key    = "./terraform.tfstate"
     region = "us-east-1"
   }
   required_providers {
