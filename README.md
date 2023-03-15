@@ -2,16 +2,16 @@
 terraform demo
 
 
-[impor](./tests/import/import.md)
+[import](./tests/import/import.md)
 
-[aliases](./tests/import/aliases.md)
+[aliases](./tests/providers%20aliases/aliases.md)
 
-[state](./tests/import/state.md)
+[state](./tests/remote%20state/state.md)
 
-[tain](./tests/import/taint.md)
+[tain](./tests/taint/taint.md)
 
-[fmt](./tests/import/fmt.md)
+[fmt](./tests/terraform%20commands/fmt.md)
 
-[versions](./tests/import/versions.md)
+[versions](./tests/versions%20tests/versions.md)
 
-[workspaces](./tests/import/workspaces.md)
+[workspaces](./tests/workspaces/workspaces.md)
