@@ -1,4 +1,5 @@
-variable "instances" {
+
+/*variable "instances" {
   type = list(object({
     name = string
     type = string
@@ -13,6 +14,4 @@ variable "instances" {
   }
 }
 
-
-
-
+*/
